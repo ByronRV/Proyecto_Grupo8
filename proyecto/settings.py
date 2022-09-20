@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'aplicacion',   #manual
 ]
 
-JWT = {
+SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
@@ -72,6 +72,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+AUTH_USER_MODEL = 'aplicacion.User'
 
 ROOT_URLCONF = 'proyecto.urls'
 
